@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.custom.i18n.resources" value="global" />
+	<constant name="struts.devMode" value="false" />
+
+	<include file="admin.xml" />
+
+	<package name="default" extends="hibernate-default">
+
+		<action name="loginPage">
+			<result>/resources/login.jsp</result>
+		</action>
+		<action name="loginsuccess" class="roseindia.action.user.UserAction">
+			<result name="success" type="dispatcher">
+				<param name="location">/resources/home.jsp</param>
+			</result>
+			<result name="input">/resources/login.jsp</result>
+		</action>
+
+		<action name="userHome">
+			<result>/resources/home.jsp</result>
+		</action>
+
+
+		<action name="logoutAction">
+			<result>/resources/logoutPage.jsp</result>
+		</action>
+
+		<action name="registerPage">
+			<result>/resources/registerUser.jsp</result>
+		</action>
+
+		<action name="register" class="roseindia.action.user.RegisterUser">
+			<result name="success">/resources/home.jsp</result>
+			<result name="input">/resources/registerUser.jsp</result>
+		</action>
+
+
+		<action name="viewProductUser" class="roseindia.action.product.SearchProduct">
+			<result name="success">resources/viewProduct.jsp</result>
+		</action>
+
+		<action name="viewProductDetailUser" class="roseindia.action.product.ViewProductDetail">
+			<result name="success" type="dispatcher">
+				<param name="location">resources/viewProductDetail.jsp</param>
+			</result>
+		</action>
+
+		<action name="searchProductByNameUser" method="SearchbyName"
+			class="roseindia.action.product.SearchProduct">
+			<result name="success">resources/viewProduct.jsp</result>
+		</action>
+
+		<action name="searchProductByCategoryUser" method="searchByCategory"
+			class="roseindia.action.product.SearchProduct">
+			<result name="success">resources/viewProduct.jsp</result>
+		</action>
+
+		<action name="searchProductByNameUser" method="SearchbyName"
+			class="roseindia.action.product.SearchProduct">
+			<result name="success">resources/viewProduct.jsp</result>
+		</action>
+
+		<action name="searchProductByCategoryUser" method="searchByCategory"
+			class="roseindia.action.product.SearchProduct">
+			<result name="success">resources/viewProduct.jsp</result>
+		</action>
+
+		<action name="viewShipping">
+			<result>resources/shippingOptions.jsp</result>
+		</action>
+
+		<action name="myCart">
+			<result>resources/myCart.jsp</result>
+		</action>
+
+		<action name="myCartWithoutShipping">
+			<result>resources/myCart.jsp</result>
+		</action>
+
+		<action name="purchaseReport">
+			<result>resources/purchaseReport.jsp</result>
+			<!--			<result name="success" type="stream">-->
+			<!--				<param name="contentType">image/jpeg</param>-->
+			<!--				<param name="inputName">fileStream</param>-->
+			<!--
+				<param
+				name="contentDisposition">attachment;filename="shopping.pdf"</param>
+			-->
+			<!--				<param name="bufferSize">1024</param>-->
+			<!--
+				<param name="location">resources/purchaseReport.jsp</param>
+			-->
+			<!--			</result>-->
+		</action>
+
+		<action name="userLogout">
+			<result>resources/logoutPage.jsp</result>
+		</action>
+
+	</package>
+
+
+
+</struts>

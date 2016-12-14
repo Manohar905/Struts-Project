@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.custom.i18n.resources" value="global" />
+	<constant name="struts.devMode" value="true" />
+	<package name="admin" namespace="/admin" extends="hibernate-default">
+		<action name="login">
+			<result>/admin/adminlogin.jsp</result>
+		</action>
+		<action name="adminlogin" class="roseindia.action.admin.AdminUserAction">
+			<result name="success">/admin/adminHome.jsp</result>
+			<result name="input">/admin/index.jsp</result>
+		</action>
+		<action name="viewUser" class="roseindia.action.user.ViewUser">
+			<result name="success" type="dispatcher">
+				<param name="location">/admin/viewUser.jsp</param>
+			</result>
+		</action>
+		<action name="deleteUser" class="roseindia.action.user.DeleteUser">
+			<result name="success" type="redirectAction">
+				<param name="actionName">viewUser</param>
+				<param name="namespace">/admin</param>
+			</result>
+		</action>
+
+		<action name="searchProductByName" method="SearchbyName"
+			class="roseindia.action.product.SearchProduct">
+			<result name="success">/admin/viewProduct.jsp</result>
+		</action>
+
+		<action name="searchProductByCategory" method="searchByCategory"
+			class="roseindia.action.product.SearchProduct">
+			<result name="success">/admin/viewProduct.jsp</result>
+		</action>
+
+		<action name="viewProduct" class="roseindia.action.product.SearchProduct">
+			<result name="success">/admin/viewProduct.jsp</result>
+		</action>
+
+		<action name="viewProductDetail" class="roseindia.action.product.ViewProductDetail">
+			<result name="success" type="dispatcher">
+				<param name="location">/admin/viewProductDetail.jsp</param>
+			</result>
+		</action>
+
+		<action name="deleteProduct" class="roseindia.action.product.DeleteProduct">
+			<result name="success" type="redirectAction">
+				<param name="actionName">viewProduct</param>
+				<param name="namespace">/admin</param>
+			</result>
+		</action>
+
+		<action name="viewOrderedItem" class="roseindia.action.orderItems.OrderItems">
+			<result name="success">/admin/viewOrderItem.jsp</result>
+		</action>
+
+		<action name="viewOrder" class="roseindia.action.order.ShowOrder">
+			<result name="success">/admin/viewOrder.jsp</result>
+		</action>
+
+		<action name="addProductForm" class="roseindia.action.product.AddProduct"
+			method="displayCategory">
+			<result name="display">/admin/addProduct.jsp</result>
+		</action>
+
+		<action name="addProduct" class="roseindia.action.product.AddProduct">
+
+			<interceptor-ref name="exception" />
+			<interceptor-ref name="i18n" />
+			<interceptor-ref name="fileUpload">
+				<!--       		<param name="allowedTypes">file</param>-->
+				<param name="maximumSize">5000000</param>
+
+			</interceptor-ref>
+			<interceptor-ref name="params">
+				<param name="excludeParams">dojo\..*,^struts\..*</param>
+			</interceptor-ref>
+			<interceptor-ref name="validation">
+				<param name="excludeMethods">input,back,cancel,browse</param>
+			</interceptor-ref>
+			<interceptor-ref name="workflow">
+				<param name="excludeMethods">input,back,cancel,browse</param>
+			</interceptor-ref>
+
+			<result name="success" type="redirectAction">
+				<param name="actionName">viewProduct</param>
+				<param name="namespace">/admin</param>
+			</result>
+
+			<result name="input">/admin/addProduct.jsp</result>
+		</action>
+
+		<action name="updateProductForm" class="roseindia.action.product.Update">
+			<result name="success">/admin/updateProduct.jsp</result>
+		</action>
+
+		<action name="updateProduct" class="roseindia.action.product.UpdateProduct">
+
+			<interceptor-ref name="exception" />
+			<interceptor-ref name="i18n" />
+			<interceptor-ref name="fileUpload">
+				<!--       		<param name="allowedTypes">file</param>-->
+				<param name="maximumSize">5000000</param>
+
+			</interceptor-ref>
+			<interceptor-ref name="params">
+				<param name="excludeParams">dojo\..*,^struts\..*</param>
+			</interceptor-ref>
+			<interceptor-ref name="validation">
+				<param name="excludeMethods">input,back,cancel,browse</param>
+			</interceptor-ref>
+			<interceptor-ref name="workflow">
+				<param name="excludeMethods">input,back,cancel,browse</param>
+			</interceptor-ref>
+
+			<result name="success">/admin/adminHome.jsp</result>
+			<result name="input">/admin/updateProduct.jsp</result>
+
+		</action>
+
+		<action name="viewCategory" class="roseindia.action.category.CategoryAction">
+			<result name="success">/admin/viewCategory.jsp</result>
+		</action>
+
+		<action name="addCategoryForm">
+			<result>/admin/AddCategory.jsp</result>
+		</action>
+
+		<action name="addCategory" method="addCategory"
+			class="roseindia.action.category.CategoryAction">
+			<result name="input">/admin/AddCategory.jsp</result>
+			<result name="addCategory">/admin/header.jsp</result>
+		</action>
+
+		<action name="deleteCategory" method="deleteCategory"
+			class="roseindia.action.category.CategoryAction">
+			<result name="deleted" type="redirectAction">
+				<param name="actionName">viewCategory</param>
+				<param name="namespace">/admin</param>
+			</result>
+		</action>
+
+		<action name="updateCategoryForm" class="roseindia.action.category.Update">
+			<result name="success">/admin/updateCategory.jsp</result>
+		</action>
+
+		<action name="updateCategory" method="updateCategory"
+			class="roseindia.action.category.CategoryAction">
+			<result name="updated" type="redirectAction">
+				<param name="actionName">viewCategory</param>
+				<param name="namespace">/admin</param>
+			</result>
+			<result name="input">/admin/updateCategory.jsp</result>
+		</action>
+
+		<action name="viewConfig" class="roseindia.action.config.ConfigAction">
+			<result name="success">/admin/viewConfig.jsp</result>
+		</action>
+
+		<action name="deleteConfig" method="delete"
+			class="roseindia.action.config.ConfigAction">
+			<result name="deleted" type="redirectAction">
+				<param name="actionName">viewConfig</param>
+				<param name="namespace">/admin</param>
+			</result>
+		</action>
+
+		<action name="addConfigForm" method="addConfigForm"
+			class="roseindia.action.config.ConfigAction">
+			<result>/admin/addConfig.jsp</result>
+		</action>
+
+		<action name="addConfig" method="addConfig"
+			class="roseindia.action.config.ConfigAction">
+			<result name="added">/admin/addConfig.jsp</result>
+			<result name="input">/admin/addConfig.jsp</result>
+		</action>
+
+		<action name="updateConfigForm" class="roseindia.action.config.Update">
+			<result name="success">/admin/updateConfig.jsp</result>
+		</action>
+
+		<action name="updateConfig" method="update"
+			class="roseindia.action.config.ConfigAction">
+			<result name="updated" type="redirectAction">
+				<param name="actionName">viewConfig</param>
+				<param name="namespace">/admin</param>
+			</result>
+		</action>
+		<action name="AdminlLgout">
+			<result>/admin/logoutPage.jsp</result>
+		</action>
+
+	</package>
+
+</struts>

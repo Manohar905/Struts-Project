@@ -1,0 +1,873 @@
+/* CSS Document */
+body
+{
+	width:980px;
+	margin:0 auto;
+	padding:0;
+	background:#000000 url(images/bodybg.jpg) repeat-x;
+	font:normal 12px Arial, Helvetica, sans-serif;
+	
+}
+img
+{
+	border:0;
+}
+.wrapperlogin
+{
+	width:468px;
+	height:351px;
+	margin:80px auto;
+	background:url(images/roundedbg.png) no-repeat;
+}
+.loginhome
+{
+	width:250px;
+	float:right;
+	padding:80px 20px 0 0;
+}
+.loginhome h2
+{
+	width:250px;
+	float:left;
+	color:#9FCD02;
+	font:bold 18px "Trebuchet MS", "Kruti Dev 010";
+}
+.loginhome label
+{
+	width:250px;
+	float:left;
+	color:#171717;
+	font:bold 12px Arial, Helvetica, sans-serif;
+}
+.loginhome .input
+{
+	width:180px;
+	float:left;
+	color:#171717;
+	padding:4px;
+	margin:0 0 6px 0;
+	font:bold 11px Arial, Helvetica, sans-serif;
+	border:1px solid #C5C5C5;
+}
+.loginhome .btn
+{
+	float:left;
+	color:#ffffff;
+	padding:4px 10px;
+	margin:0 0 6px 0;
+	font:bold 13px Arial, Helvetica, sans-serif;
+	border:1px solid #ffffff;
+	background:#9FCD02;
+}
+.wrapper
+{
+	width:980px;
+	padding:20px 0;
+	float:left;
+}
+.header
+{
+	width:980px;
+	float:left;
+	text-align:center;
+}
+#navigation
+{
+	width:970px;
+	list-style: none;
+	padding:5px 0 5px 10px;
+	margin: 0;
+	float:left;
+	background:#799c01;
+}
+#navigation ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float:left;
+}
+
+#navigation li
+{
+	float: left;
+	margin: 0;
+	padding:0;
+	list-style:none;
+	margin:0 8px 0 0;
+} 
+#navigation a
+{
+	color:#ffffff;
+	float:left;
+	background:url(images/menuleftcorner.png) no-repeat left;
+	text-decoration: none;
+	padding:5px 0 5px 29px;
+	font:bold 13px Arial, Helvetica, sans-serif;
+}
+
+#navigation a span
+{
+	background:url(images/menurightcorner.png) no-repeat right;
+	float:left;
+	padding:5px 29px 5px 0;
+}
+
+#navigation a, #navigation a span
+{
+	display: block;
+	float: left;
+}
+
+/* Hide from IE5-Mac \*/
+#navigation a, #navigation a span
+{
+	float: none;
+}
+/* End hide */
+
+#navigation a:hover
+{
+	color: #fff;
+	background:url(images/menuleftcorner_hover.png) no-repeat left;
+	padding:5px 0 5px 29px;
+}
+
+#navigation a:hover span
+{
+	background:url(images/menurightcorner_hover.png) no-repeat right;
+	padding:5px 29px 5px 0;
+}
+body#home a.home,
+body#users a.users,
+body#gallery a.gallery,
+body#comments a.comments,
+body#news a.news
+{
+	color: #fff;
+	background:url(images/menuleftcorner_hover.png) no-repeat left;
+	padding:4px 0 4px 29px;
+	text-decoration:none;
+}
+body#home a.home span,
+body#users a.users span,
+body#gallery a.gallery span,
+body#comments a.comments span,
+body#news a.news span
+{
+	background:url(images/menurightcorner_hover.png) no-repeat right;
+	padding:4px 29px 4px 0;
+}
+.page
+{
+	width:960px;
+	float:left;
+	padding:20px 10px;
+	background:#ffffff;
+}
+
+/* ------------------------------ Start form style  --------------------------------------------*/
+.spacer{
+	clear:both;
+	height:1px;
+}
+.myform
+{
+	margin:0 auto;
+	width:510px;
+	padding:14px;
+}
+#formstyle
+{
+	border:solid 1px #758300;
+	background:#e8f2cd;
+}
+#formstyle h1
+{
+	font-size:14px;
+	font-weight:bold;
+	color:#799C01;
+	border-bottom:solid 1px #758300;
+	padding-bottom:10px;
+}
+#formstyle label
+{
+	display:block;
+	font-weight:bold;
+	text-align:right;
+	width:190px;
+	float:left;
+}
+#formstyle .small
+{
+	color:#799C01;
+	display:block;
+	font-size:10px;
+	font-weight:normal;
+	text-align:right;
+	width:190px;
+}
+#formstyle input
+{
+	float:left;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #A9C501;
+	width:250px;
+	margin:2px 0 5px 20px;
+}
+#formstyle .messageshow
+{
+	 float:right;
+	 width:400px;
+	 color:#ff0000;
+	 font-size:11px;
+	 padding:0 40px 10px 0;
+	 font-weight:normal;
+}
+#formstyle input[type=file]
+{
+	float:left;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 0px #A9C501;
+	width:250px;
+	margin:2px 0 15px 20px;
+}
+#formstyle textarea
+{
+	float:left;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #A9C501;
+	width:250px;
+	margin:2px 0 10px 20px;
+}
+#formstyle .textarea
+{
+	float:left;
+	font-size:12px;
+	width:455px;
+	padding:4px 2px;
+	border:solid 1px #A9C501;
+	margin:2px 0 10px 20px;
+}
+#formstyle select
+{
+	float:left;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #A9C501;
+	width:250px;
+	margin:2px 0 5px 20px;
+}
+#formstyle button
+{
+	clear:both;
+	margin-left:212px;
+	width:125px;
+	height:31px;
+	background:#758300;
+	text-align:center;
+	line-height:31px;
+	color:#FFFFFF;
+	font-size:13px;
+	font-weight:bold;
+	border:0;
+}
+#formstyle .rgtbutton
+{
+	 float:right;
+	 margin:0 30px 0 0;
+}
+.buttonview
+{
+	padding:10px 20px;
+	font-weight:bold;
+	font-size:18px;
+	color:192324;
+}
+.buttonview:hover
+{
+	color:#799c01;
+}
+/* ------------------------------ End form style  --------------------------------------------*/
+.table
+{
+	border:1px solid #758300;
+	background:#E8F2CD;
+	padding:10px;
+}
+.th
+{
+	border-bottom:2px solid #A9C501;
+	text-align:center;
+	line-height:14pt;
+}
+.td
+{
+	background:#f1f6dc;
+	line-height:20pt;
+	border-bottom:1px solid #ffffff;
+	text-align:center;
+}
+.td:hover
+{
+	background:#fcfff1;
+	color:#758300;
+}
+.td a
+{
+	font:bold 12px Arial, Helvetica, sans-serif;
+	color:#758300;
+	text-decoration:none;
+}
+
+
+/* CSS Document */
+body
+{
+	width:1000px;
+	margin:0 auto;
+	padding:0;
+	font:normal 12px Arial, Helvetica, sans-serif;
+	background:#e4e1e5;
+	color:#171717;
+}
+img
+{
+	border:0;
+}
+blockquote
+{
+	float:left;
+	margin:0 0 22px 0;
+	padding:0 0 0 10px;
+	border-left:3px solid #CCCCCC;
+	font:italic 13px Arial, Helvetica, sans-serif;
+	line-height:14pt;
+}
+.wrapper
+{
+	width:980px;
+	margin:10px 0 0 0;
+	float:left;
+	padding:10px;
+	background:#ffffff;
+}
+.header
+{
+	width:980px;
+	float:left;
+	text-align:center;
+}
+.navigation
+{
+	width:980px;
+	float:left;
+	border-bottom:1px solid #dcdadd;
+	border-top:1px solid #dcdadd;
+	background:#f1f1f1;
+	margin:15px 0;
+}
+.navigation ul
+{
+	float:left;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.navigation li
+{
+	float:left;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.navigation ul li a
+{
+	float:left;
+	margin:0;
+	padding:10px 35px;
+	list-style:none;
+	font:normal 16px "Trajan Pro", Georgia, "Times New Roman", Times, serif;
+	color:#1e1b1d;
+	text-decoration:none;
+}
+.navigation ul li a:hover
+{
+	color:#ffffff;
+	background:#702335 url(images/maroon_bg.jpg) repeat-x;
+}
+body#home a.home,
+body#aboutus a.aboutus,
+body#newsletter a.newsletter,
+body#testimonials a.testimonials,
+body#faqs a.faqs,
+body#contactus a.contactus
+{
+	color:#ffffff;
+	background:#702335 url(images/maroon_bg.jpg) repeat-x;
+}
+.page
+{
+	width:980px;
+	float:left;
+	padding:0 0 20px 0;
+}
+.pageLeft
+{	
+	width:660px;
+	float:left;
+}
+.pageLeft h1
+{	
+	width:660px;
+	float:left;
+	font:bold 18px "Trajan Pro", Georgia, "Times New Roman", Times, serif;
+	color:#952d46;
+	margin:0;
+	padding:0;
+	
+}
+.pageLeft h2
+{	
+	width:660px;
+	float:left;
+	font:bold 14px "Trajan Pro", Georgia, "Times New Roman", Times, serif;
+	color:#952d46;
+	margin:0;
+	padding:0;	
+}
+.pageLeft p
+{	
+	line-height:12pt;	
+}
+.pageLeft p a
+{	
+	font:bold 12px Arial, Helvetica, sans-serif;
+	color:#952d46;
+}
+.pageLeft ul
+{	
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.pageLeft li
+{	
+	margin:0 0 0 15px;
+	padding:0;
+	list-style:decimal;
+	line-height:14pt;
+	clear:both;
+}
+.pageRight
+{	
+	width:304px;
+	float:right;
+}
+.box
+{	
+	width:300px;
+	float:left;
+	border:1px solid #dcdadd;
+	padding:1px;
+}
+.boxShow
+{
+	width:280px;
+	float:left;
+	padding:10px;
+	background:url(images/gray_bg.jpg) repeat-x;
+}
+.boxShow h1
+{
+	width:280px;
+	float:left;
+	margin:0 0 1px 0;
+	padding:0;
+	border-bottom:1px solid #beb8be;
+	font:bold 18px "Trajan Pro", Georgia, "Times New Roman", Times, serif;
+	color:#952d46;
+}
+.boxShow ul
+{
+	float:left;
+	margin:0;
+	padding:5px 0 0 0;
+	list-style:none;
+	border-top:2px solid #beb8be;
+}
+.boxShow li
+{
+	width:280px;
+	float:left;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.boxShow ul li a
+{
+	float:left;
+	margin:4px 0;
+	padding:2px 0 2px 20px;
+	list-style:none;
+	background:url(images/paper_icon.jpg) no-repeat 2px 5px;
+	font:bold 11px Arial, Helvetica, sans-serif;
+	color:#171717;
+	text-decoration:none;
+}
+.boxShow ul li a span
+{
+	font:normal 11px Arial, Helvetica, sans-serif;
+	color:#878787;
+	text-decoration:none;
+}
+.boxShow ul li a:hover
+{
+	color:#878787;
+}
+.footertop
+{
+	width:1000px;
+	float:left;
+	margin:1px 0 0 0;
+	padding:10px 0;
+	background:url(images/gray_bg.jpg) repeat-x;
+}
+.footerbox
+{
+	width:310px;
+	float:left;
+	padding:10px 15px;
+	border-right:1px solid #dcdadd;
+	height:240px;
+}
+.footerboxright
+{
+	width:290px;
+	float:left;
+	padding:10px 0 0 20px;
+}
+.boxheading
+{
+	float:left;
+	font:normal 20px "Trajan Pro", Georgia, "Times New Roman", Times, serif;
+	color:#952d46;
+	padding:0 0 10px 0;
+}
+.footerbox ul
+{
+	float:left;
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+.footerbox li
+{
+	width:300px;
+	float:left;
+	padding:2px 0;
+	margin:0 0 5px 0;
+	list-style:none;
+	border-bottom:1px solid #ebebeb;
+}
+.footerbox ul li a
+{
+	float:left;
+	padding:0 0 0 20px;
+	margin:0;
+	list-style:none;
+	background:url(images/paper_icon.jpg) no-repeat 2px 2px;
+	font:bold 11px Arial, Helvetica, sans-serif;
+	color:#171717;
+	text-decoration:none;
+}
+.footerbox ul li a span
+{
+	font:normal 11px Arial, Helvetica, sans-serif;
+	color:#878787;
+	text-decoration:none;
+}
+.footerbox ul li a:hover
+{
+	color:#878787;
+}
+.viewmore
+{
+	float:right;
+	padding:3px 14px;
+	font:bold 12px Arial, Helvetica, sans-serif;
+	color:#ffffff;
+	text-decoration:none;
+	background:#702335 url(images/maroon_bg.jpg) repeat-x;
+}
+.viewmore:hover
+{
+	text-decoration:underline;
+}
+.link
+{
+	font:bold 12px Arial, Helvetica, sans-serif;
+	color:#171717;
+	text-decoration:none;
+}
+.link:hover
+{
+	color:#878787;
+	text-decoration:underline;
+}
+.frminput
+{
+	float:left;
+	border:1px solid #d6d6df;
+	padding:5px;
+	margin:0 0 3px 0;
+	font:normal 11px Arial, Helvetica, sans-serif;
+	color:#171717;
+}
+.frmbtn
+{
+	float:right;
+	margin:0;
+	padding:3px 14px;
+	font:bold 12px Arial, Helvetica, sans-serif;
+	color:#ffffff;
+	text-decoration:none;
+	background:#702335 url(images/maroon_bg.jpg) repeat-x;
+	border:0;
+}
+.imgicon
+{
+	float:left;
+	margin:5px;
+}
+.footer
+{
+	width:1000px;
+	float:left;
+	margin:0;
+	padding:20px 0;
+	text-align:center;
+	font-size:11px;
+	line-height:16pt;
+	background:##f1f1f1;
+}
+.footer a
+{
+	font:bold 12px Arial, Helvetica, sans-serif;
+	color:#171717;
+	margin:0 10px;
+	text-decoration:none;
+}
+.footer a:hover
+{
+	color:#000000;
+	text-decoration:underline;
+}
+/* ------------------------------ form page start here -------------------------------------------*/
+.leftbox
+{
+	width:656px;
+	float:left;
+	padding:1px;
+	border:1px solid #dcdadd;
+}
+.leftboxShow
+{
+	width:636px;
+	float:left;
+	padding:10px;
+	background:url(images/gray_bg.jpg) repeat-x;
+}
+.leftboxShow h1
+{
+	width:636px;
+	float:left;
+	margin:0 0 1px 0;
+	padding:0;
+	border-bottom:1px solid #beb8be;
+	font:bold 18px "Trajan Pro", Georgia, "Times New Roman", Times, serif;
+	color:#952d46;
+}
+#frmstyle
+{
+	width:636px;
+	float:left;
+	padding:20px 0 0 0;
+}
+#frmstyle .label
+{
+	width:200px;
+	float:left;
+	display:block;
+	font-weight:bold;
+	text-align:right;
+}
+#frmstyle .small
+{
+	color:#666666;
+	display:block;
+	font-size:11px;
+	font-weight:normal;
+	text-align:right;
+	width:200px;
+}
+#frmstyle .input
+{
+	float:left;
+	font-size:12px;
+	padding:5px 2px;
+	border:solid 1px #DCDADD;
+	margin:2px 0 10px 15px;
+}
+#frmstyle .button
+{
+	background:#702335 url(images/maroon_bg.jpg) repeat-x;
+	color:#FFFFFF;
+	border:0;
+	margin:0 0 0 14px;
+	padding:6px 15px;
+	font:bold 13px Arial, Helvetica, sans-serif;
+}
+div.radioalert
+{
+	display:none;
+	float:left;
+	width:250px;
+}
+.alertinput
+{
+	width:200px;
+	float:left;
+	padding:3px;
+	border:solid 1px #DCDADD;
+	margin:1px 0 1px 3px;
+	color:#702335;
+	font-size:11px;
+}
+.radiobtnshow
+{
+	width:400px;
+	float:left;
+	padding:0 0 10px 10px;
+}
+
+#frmstyle .otherChoice
+{
+	float:left;
+	font-size:12px;
+	padding:5px 2px;
+	border:solid 1px #DCDADD;
+	margin:2px 0 10px 15px;
+}
+/* ----------------------------- NEW SECTION STYLE STATR HERE  ------------------------*/
+.newsadded
+{
+	 width:600px;
+	 float:left;
+	 padding:0 0 3px 0;
+	 border-bottom:1px solid #f1f1f1;
+	 margin:0 0 15px 0;
+}
+.pageLeft blockquote
+{
+	  width:630px;
+	  float:left;
+	  background:#f1f1f1;
+	  padding:10px;
+	  border-left:5px solid #cccccc;
+	  font:bold 12px arial;
+	  margin:15px 0 10px 0;
+
+}
+.newsrightimg
+{
+	float:right;
+	padding:2px;
+	border:1px solid #cccccc;
+	margin:0 0 0 10px;
+}
+/* ----------------------------- NEW SECTION STYLE END HERE  ------------------------*/
+
+/* ----------------------------- START SHOW DATA STYLE HERE  ------------------------*/
+.Showdata
+{
+	  width:80%;
+	  margin:0 auto;
+	  color:#000000;
+}
+.Showdatadisplay
+{
+	  width:100%;
+	  float:left;
+	  padding:20px 0;
+}
+.Showdatadisplay .heading
+{
+	  font-size:30px;
+	  float:right;
+	  color:#000000;
+	  margin:0 5% 0 0;
+}
+.Showdatadisplay img
+{
+	  float:left;
+	  margin:0 0 0 10%;
+
+}
+.ShowdatadisplayLeft
+{
+	  width:25%;
+	  float:left;
+	  margin:1px 0 0 10%;
+	  text-align:right;
+	  padding:5px 20px 5px 0;
+	  font-weight:bold;
+	  font-size:12px;
+	  background:#effdc1;
+}
+.ShowdatadisplayRight
+{
+	  width:55%;
+	  float:left;
+	  margin:1px 0 0 0;
+	  padding:5px 0 5px 20px;
+	  font-size:12px;
+	  text-align:left;
+	  background:#effdc1;
+}
+.button
+{
+	  margin:0 auto;
+	  line-height:50px;
+	  font-size:24px;
+	  padding:10px 20px;
+	  color:#ffffff;
+	  background:#799c01;
+	  text-decoration:none;
+	  border:1px solid #9fcd02;
+}
+.button:hover
+{
+
+	  background:#192324;
+	  color:#799c01;
+}
+.iphoneimg
+{
+	 width:80%;
+	 float:left;
+	 padding:0 0 0 6%;
+}
+.iphoneimgshow
+{
+	 width:300px;
+	 height:300px;
+	 float:left;
+	 border:1px solid #cccccc;
+	 padding:2px;
+	 margin:10px 0;
+}
+/* ----------------------------- END SHOW DATA STYLE HERE  ------------------------*/
